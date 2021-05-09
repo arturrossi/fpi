@@ -37,7 +37,7 @@ class Warp:
 			if (next_f_event_index == 0):
 				from_event = f_events[0] - start_time
 				to_event = t_events[0] - start_time
-				return self.quadraticFunction(t, [from_event, f_events[0], [to_event, t_events[0]]])
+				return self.quadraticFunction(t, [from_event, f_events[0]], [to_event, t_events[0]])
 			
 			else:
 				return self.quadraticFunction(t, [f_events[next_f_event_index - 1], f_events[next_f_event_index]], [t_events[next_f_event_index - 1], t_events[next_f_event_index]])
